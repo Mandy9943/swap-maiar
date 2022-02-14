@@ -13,7 +13,7 @@ const Block = ({ text, color }: IProps) => {
         border: "1px solid" + Colors[color],
         borderLeft: "0.4rem solid " + Colors[color],
         display: "inline",
-        borderRadius: "0.45rem",
+        borderRadius: "0.75rem",
         marginLeft: "1rem",
         fontSize: "12.8px",
         color: Colors[color],

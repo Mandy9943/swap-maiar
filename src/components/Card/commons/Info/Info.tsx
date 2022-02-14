@@ -7,7 +7,7 @@ interface IInfoItem {
   children1: ReactChild;
   children2: ReactChild;
 }
-const InfoItem = ({ children1, children2 }: IInfoItem) => {
+export const InfoItem = ({ children1, children2 }: IInfoItem) => {
   return (
     <Box
       sx={{

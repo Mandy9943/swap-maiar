@@ -7,6 +7,7 @@ import TabUnstyled from "@mui/base/TabUnstyled";
 import { Box } from "@mui/system";
 import { Colors } from "../../lib/colors";
 import Form from "./commons/Form/Form";
+import Pools from "./commons/Pools/Pools";
 
 const Tab = styled(TabUnstyled)(({ theme }) => ({
   color: theme.palette.text.primary,
@@ -96,7 +97,9 @@ const Card = () => {
           <TabPanel value={0}>
             <Form />
           </TabPanel>
-          <TabPanel value={1}>Second content</TabPanel>
+          <TabPanel value={1}>
+            <Pools />
+          </TabPanel>
         </TabsUnstyled>
       </Box>
     </Box>

@@ -8,7 +8,7 @@ const Wrapper = ({ children }: IProps) => {
   return (
     <Container
       sx={{
-        paddingTop: "20px",
+        padding: "20px",
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
