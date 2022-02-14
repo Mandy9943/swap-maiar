@@ -5,9 +5,7 @@ import {
   styled,
   Typography,
 } from "@mui/material";
-import { bgcolor } from "@mui/system";
 import React, { ChangeEvent, useState } from "react";
-import { currencies } from "../../lib/currencyData";
 import { ICurrency } from "../../lib/types";
 import SelectCurrency from "./commons/SelectCurrency/SelectCurrency";
 interface IProps {

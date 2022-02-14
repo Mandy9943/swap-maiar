@@ -1,8 +1,6 @@
 import {
   Box,
   Button,
-  Fab,
-  IconButton,
   Paper,
   styled,
   Typography,
@@ -14,7 +12,6 @@ import logoBolt from "../../../../assets/images/logoBolt.svg";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import BoltIcon from "@mui/icons-material/Bolt";
-import { Colors } from "../../../../lib/colors";
 const Buttons = () => {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.up("md"));

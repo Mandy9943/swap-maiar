@@ -8,12 +8,9 @@ import {
 } from "@mui/material";
 import TabsUnstyled from "@mui/base/TabsUnstyled";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
-import TabPanelUnstyled from "@mui/base/TabPanelUnstyled";
-import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
-import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
-import { Paper } from "@mui/material";
+
+import TabUnstyled from "@mui/base/TabUnstyled";
 import { Colors } from "../../../../lib/colors";
-import { grey } from "@mui/material/colors";
 
 const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
@@ -68,7 +65,7 @@ const TabsList = styled(TabsListUnstyled)(({ theme }) => ({
 }));
 
 export default function UnstyledTabsCustomized() {
-  const [mode, setMode] = React.useState<"light" | "dark">("light");
+  const [mode] = React.useState<"light" | "dark">("light");
 
   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
   const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));

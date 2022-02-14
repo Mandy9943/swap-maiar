@@ -1,13 +1,11 @@
 import {
   Box,
-  Divider,
   styled,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import React from "react";
-import Loader from "../../../../assets/images/logo.svg";
 
 const LogoWrapper = styled("svg")(({ theme }) => ({
   height: "2.2rem",

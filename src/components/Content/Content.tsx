@@ -1,17 +1,7 @@
-import {
-  Box,
-  Container,
-  createTheme,
-  ThemeProvider,
-  Typography,
-} from "@mui/material";
-import React, { ReactNode } from "react";
+import { Box, Container, Typography } from "@mui/material";
+import React from "react";
 import Card from "../Card";
 import Footer from "../Footer/Footer";
-
-interface IProps {
-  children: ReactNode;
-}
 
 const Content = () => {
   return (

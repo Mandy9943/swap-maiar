@@ -92,7 +92,7 @@ const SelectCurrency = ({ selectedCurrency }: IProps) => {
 
 export default SelectCurrency;
 
-export const CurrencyImg = styled("img")(({}) => ({
+export const CurrencyImg = styled("img")(() => ({
   width: "100%",
   height: "100%",
 }));

@@ -1,7 +1,6 @@
 import { Box, Container } from "@mui/material";
 import React, { ReactNode } from "react";
 import Block from "../../../Block/Block";
-import Footer from "../../../Footer/Footer";
 interface IProps {
   children: ReactNode;
 }

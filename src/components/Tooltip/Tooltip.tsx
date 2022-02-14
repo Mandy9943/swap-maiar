@@ -1,4 +1,4 @@
-import { styled, tooltipClasses, TooltipProps, Tooltip } from "@mui/material";
+import { Tooltip } from "@mui/material";
 import React, { ReactChild, ReactElement } from "react";
 import InfoIcon from "@mui/icons-material/Info";
 interface IProps {

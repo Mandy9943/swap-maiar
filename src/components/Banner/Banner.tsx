@@ -1,5 +1,5 @@
 import { Lock } from "@mui/icons-material";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import React from "react";
