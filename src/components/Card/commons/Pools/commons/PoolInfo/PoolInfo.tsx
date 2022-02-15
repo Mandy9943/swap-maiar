@@ -1,8 +1,11 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import { InfoItem } from "../../../Info/Info";
+import { InfoItem } from "../../../InfoItem/InfoItem";
 import WaterIcon from "@mui/icons-material/Water";
 import StorageIcon from "@mui/icons-material/Storage";
+import MyButton from "../../../../../Button/Button";
+import BoltIcon from "@mui/icons-material/Bolt";
+
 const PoolInfo = () => {
   return (
     <Box
@@ -11,8 +14,9 @@ const PoolInfo = () => {
         padding: "1.2rem",
       }}
     >
-      <Typography variant="body1">
+      <Typography variant="body1" component={"div"}>
         <InfoItem
+          pools
           children1={
             <Box
               sx={{
@@ -42,6 +46,7 @@ const PoolInfo = () => {
           children2={"$653,757,616"}
         />
         <InfoItem
+          pools
           children1={
             <Box
               sx={{
@@ -71,6 +76,7 @@ const PoolInfo = () => {
           children2={"$653,757,616"}
         />
         <InfoItem
+          pools
           children1={
             <Box
               sx={{
@@ -109,6 +115,7 @@ const PoolInfo = () => {
           children2={"1,741,535"}
         />
         <InfoItem
+          pools
           children1={
             <Box
               sx={{
@@ -146,6 +153,50 @@ const PoolInfo = () => {
           }
           children2={"921,646,832,101"}
         />
+        <Grid container spacing={3} marginTop={1}>
+          <Grid item xs={6}>
+            <MyButton
+              type="primary"
+              sx={{
+                width: "100%",
+              }}
+            >
+              <>
+                <BoltIcon
+                  fontSize="small"
+                  color="inherit"
+                  sx={{
+                    marginRight: "10px",
+                  }}
+                />
+
+                <Typography
+                  variant="body1"
+                  color="inherit"
+                  sx={{ textTransform: "none" }}
+                >
+                  Connect
+                </Typography>
+              </>
+            </MyButton>
+          </Grid>
+          <Grid item xs={6}>
+            <MyButton
+              type="secondary"
+              sx={{
+                width: "100%",
+              }}
+            >
+              <Typography
+                variant="body1"
+                color="inherit"
+                sx={{ textTransform: "none" }}
+              >
+                Swap
+              </Typography>
+            </MyButton>
+          </Grid>
+        </Grid>
       </Typography>
     </Box>
   );

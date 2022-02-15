@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Paper,
   styled,
   Typography,
@@ -12,9 +11,17 @@ import logoBolt from "../../../../assets/images/logoBolt.svg";
 import NightlightIcon from "@mui/icons-material/Nightlight";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import BoltIcon from "@mui/icons-material/Bolt";
+import { useDispatch } from "react-redux";
+import { changeMode } from "../../../../redux/slices/themeSlice";
+import MyButton from "../../../Button/Button";
 const Buttons = () => {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.up("md"));
+  const dispatch = useDispatch();
+
+  const handleMode = () => {
+    dispatch(changeMode());
+  };
   return (
     <Typography variant="body2" component={"div"}>
       <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -35,59 +42,32 @@ const Buttons = () => {
           <Typography variant="body2">0.000524</Typography>
         </BoxS>
         <BoxS>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "secondary.main",
-              color: "primary.main",
-              "&:hover": {
-                color: "#fff",
-              },
-            }}
-          >
+          <MyButton type="secondary" onClick={handleMode}>
             <NightlightIcon fontSize="inherit" color="inherit" />
-          </Button>
+          </MyButton>
         </BoxS>
         <BoxS>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "secondary.main",
-              color: "primary.main",
-              "&:hover": {
-                color: "#fff",
-              },
-            }}
-          >
+          <MyButton type="secondary">
             <MoreHorizIcon fontSize="medium" color="inherit" />
-          </Button>
+          </MyButton>
         </BoxS>
         <BoxS>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "primary.main",
-              color: "#fff",
-              padding: "0 0.8rem",
-
-              "&:hover": {
-                backgroundColor: "#0042fc",
-              },
-            }}
-          >
-            <BoltIcon
-              fontSize="inherit"
-              color="inherit"
-              sx={{
-                marginRight: matchesMd ? "0.5rem" : "0",
-              }}
-            />
-            {matchesMd && (
-              <Typography variant="body2" sx={{ textTransform: "none" }}>
-                Connect
-              </Typography>
-            )}
-          </Button>
+          <MyButton type="primary">
+            <>
+              <BoltIcon
+                fontSize="inherit"
+                color="inherit"
+                sx={{
+                  marginRight: matchesMd ? "0.5rem" : "0",
+                }}
+              />
+              {matchesMd && (
+                <Typography variant="body2" sx={{ textTransform: "none" }}>
+                  Connect
+                </Typography>
+              )}
+            </>
+          </MyButton>
         </BoxS>
       </Box>
     </Typography>

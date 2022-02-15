@@ -30,6 +30,7 @@ const SelectCurrency = ({ selectedCurrency }: IProps) => {
         display: "flex",
         cursor: "pointer",
         position: "relative",
+        backgroundColor: "background.default",
       }}
       ref={ref}
       onClick={handleClickBtn}
@@ -40,6 +41,10 @@ const SelectCurrency = ({ selectedCurrency }: IProps) => {
           width: "3.25rem",
           height: "3.25rem",
           border: "1px solid #cccccc",
+          display: {
+            xs: "none",
+            md: "block",
+          },
         }}
       >
         <CurrencyImg
@@ -50,7 +55,7 @@ const SelectCurrency = ({ selectedCurrency }: IProps) => {
       <Box
         sx={{
           flex: "1",
-          marginLeft: "5px",
+          marginLeft: "15px",
           display: "flex",
           minWidth: "100px",
           justifyContent: "space-between",

@@ -43,8 +43,8 @@ const Logo = () => {
             y2="1"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="currentColor"></stop>
-            <stop offset="1" stop-color="currentColor"></stop>
+            <stop offset="0" stopColor="currentColor"></stop>
+            <stop offset="1" stopColor="currentColor"></stop>
           </Image>
         </defs>
 
@@ -114,7 +114,7 @@ const Logo = () => {
               data-name="Path 1838"
               d="M355.676,152.213l-3.832,17.8h-9.661Z"
               transform="translate(-40.089 0)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linear-gradient-logo)"
             ></path>
             <path
@@ -122,7 +122,7 @@ const Logo = () => {
               data-name="Path 1839"
               d="M326.45,271.184l-7.053,9.379H295.04l7.054-9.379Z"
               transform="translate(0 -101.17)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linear-gradient-logo)"
             ></path>
             <path
@@ -130,7 +130,7 @@ const Logo = () => {
               data-name="Path 1840"
               d="M381.139,333.864l-13.493,17.8,3.832-17.8Z"
               transform="translate(-61.742 -154.472)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linear-gradient-logo)"
             ></path>
           </g>

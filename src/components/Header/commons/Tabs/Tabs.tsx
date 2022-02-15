@@ -11,6 +11,8 @@ import TabsListUnstyled from "@mui/base/TabsListUnstyled";
 
 import TabUnstyled from "@mui/base/TabUnstyled";
 import { Colors } from "../../../../lib/colors";
+import { RootState } from "../../../../redux/store";
+import { useSelector } from "react-redux";
 
 const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
@@ -65,7 +67,9 @@ const TabsList = styled(TabsListUnstyled)(({ theme }) => ({
 }));
 
 export default function UnstyledTabsCustomized() {
-  const [mode] = React.useState<"light" | "dark">("light");
+  const mode = useSelector(
+    (state: RootState) => state.theme.mainTheme.palette.mode
+  );
 
   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
   const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));

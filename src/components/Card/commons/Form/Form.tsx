@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Checkbox,
   Fab,
   FormControlLabel,
@@ -12,8 +11,9 @@ import TextField from "../../../TextField/TextField";
 import Wrapper from "../Wrapper/Wrapper";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import BoltIcon from "@mui/icons-material/Bolt";
-import Info from "../Info/Info";
+import Info from "../InfoItem/InfoItem";
 import MyTooltip from "../../../Tooltip/Tooltip";
+import MyButton from "../../../Button/Button";
 const Form = () => {
   return (
     <Wrapper>
@@ -85,35 +85,30 @@ const Form = () => {
             marginBottom: "15px",
           }}
         >
-          <Button
-            variant="contained"
+          <MyButton
+            type="primary"
             sx={{
-              backgroundColor: "primary.main",
-              color: "#fff",
-              padding: "0 0.8rem",
               width: "100%",
-
-              "&:hover": {
-                backgroundColor: "#0042fc",
-              },
             }}
           >
-            <BoltIcon
-              fontSize="small"
-              color="inherit"
-              sx={{
-                marginRight: "10px",
-              }}
-            />
+            <>
+              <BoltIcon
+                fontSize="small"
+                color="inherit"
+                sx={{
+                  marginRight: "10px",
+                }}
+              />
 
-            <Typography
-              variant="body1"
-              color="inherit"
-              sx={{ textTransform: "none" }}
-            >
-              Connect
-            </Typography>
-          </Button>
+              <Typography
+                variant="body1"
+                color="inherit"
+                sx={{ textTransform: "none" }}
+              >
+                Connect
+              </Typography>
+            </>
+          </MyButton>
         </Box>
         <Typography
           variant="body1"

@@ -6,18 +6,21 @@ import MyTooltip from "../../../Tooltip/Tooltip";
 interface IInfoItem {
   children1: ReactChild;
   children2: ReactChild;
+  pools?: boolean;
 }
-export const InfoItem = ({ children1, children2 }: IInfoItem) => {
+export const InfoItem = ({ children1, children2, pools }: IInfoItem) => {
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "space-between",
         padding: "7px 0",
+        flexDirection: pools ? { xs: "column", md: "row" } : "row",
       }}
     >
       <Typography
         variant="body1"
+        component={"div"}
         sx={{
           color: "text.secondary",
         }}
@@ -26,8 +29,10 @@ export const InfoItem = ({ children1, children2 }: IInfoItem) => {
       </Typography>
       <Typography
         variant="body1"
+        component={"div"}
         sx={{
           color: "text.secondary",
+          marginLeft: { xs: "3rem", md: "0" },
         }}
       >
         {children2}
