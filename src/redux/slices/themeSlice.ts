@@ -39,7 +39,7 @@ export const themeOptions: ThemeOptions = {
     },
   },
   palette: {
-    mode: "dark",
+    mode: "light",
 
     primary: {
       main: Colors.primary,
